@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f7f7;
+  color: #3d3d3d;
+}
+
+.atas {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  margin: 0 8%;
+  position: relative;
+  top: 0;
+}
+
+h2 {
+  padding: 2px 4px;
+  font-weight: 700;
+}
+h2 span {
+  color: #ff7b0f;
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+}
+
+.table-container {
+  max-width: 1200px;
+  margin: 1rem 8% 0;
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* dark-mode */
+#search {
+  border-radius: 12px;
+  padding: 4px 8px;
+  border: none;
+
+  outline: none;
+}
+.dark-mode #search {
+  background-color: #1e2028;
+}
+.dark-mode h1 {
+  color: #ffffff;
+}
+
+.dark-mode #darkModeBtn {
+  background-color: #1e2028;
+}
+
+.dark-mode #darkModeBtn img {
+  filter: brightness(0) invert(1);
+}
+
+#darkModeBtn {
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: #fff;
+}
+.dark-mode {
+  background-color: #0f1117;
+  color: white;
+}
+
+.dark-mode .table-container {
+  background-color: #1e2028;
+}
+
+.dark-mode table {
+  color: white;
+}
+
+.dark-mode th {
+  background-color: #333;
+}
+
+.dark-mode td {
+  border-color: #444;
+}
+
+.dark-mode tbody tr:nth-child(even) {
+  background-color: #0f1117;
+}
+
+.dark-mode input {
+  color: #fff;
+}
+
+.dark-mode tbody tr:hover {
+  background-color: #363030;
+}
+
+tbody tr:hover {
+  background-color: #e2d8d8;
+}
+
+/* search */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 8%;
+}
+
+#search {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* tombol darkmode img */
+#img2 {
+  display: none;
+}
+
+/* media query sir */
+@media (max-width: 768px) {
+  th,
+  td {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+  #search {
+    width: 200px;
+  }
+  .table-container {
+    margin: 1rem 2% 0;
+  }
+  .atas {
+    height: 60px;
+    margin: 0 2%;
+  }
+  .controls {
+    margin: 0 2%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  th,
+  td {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+}

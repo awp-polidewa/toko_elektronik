@@ -1,17 +1,18 @@
 const darkModeBtn = document.getElementById("darkModeBtn");
-const img1 = document.getElementById("img1");
-const img2 = document.getElementById("img2");
+const moonIcon = document.getElementById("moonIcon");
+const sunIcon = document.getElementById("sunIcon");
+
+// Load theme dari localStorage
+if (localStorage.getItem("darkMode") === "true") {
+  document.body.classList.add("dark-mode");
+  moonIcon.style.display = "none";
+  sunIcon.style.display = "block";
+}
 
 darkModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
-
-  if (document.body.classList.contains("dark-mode")) {
-    img1.style.display = "none";
-    img2.style.display = "block";
-    // darkModeBtn.textContent = "☀️ Light Mode";
-  } else {
-    // darkModeBtn.textContent = "🌙 Dark Mode";
-    img1.style.display = "block";
-    img2.style.display = "none";
-  }
+  const isDark = document.body.classList.contains("dark-mode");
+  moonIcon.style.display = isDark ? "none" : "block";
+  sunIcon.style.display = isDark ? "block" : "none";
+  localStorage.setItem("darkMode", isDark);
 });

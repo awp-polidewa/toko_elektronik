@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Elektronik - Detail Produk</title>
+  <link rel="stylesheet" href="/css/detail.css" />
+  <link rel="icon" type="image/svg" href="assets/favicon.svg" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="/dashboard.html" class="logo"><span>Daftar</span> Produk</a>
+    </div>
+    <div class="nav-right">
+      <span id="userDisplay" class="user-name"></span>
+      <span id="authBtns">
+        <a href="login.html" class="btn-auth">Login</a>
+        <a href="register.html" class="btn-auth btn-outline">Register</a>
+      </span>
+      <button id="logoutBtn" class="btn-auth btn-outline" style="display:none">Logout</button>
+      <a href="dashboard.html" class="btn-back">&larr; Kembali</a>
+      <button id="darkModeBtn" class="btn-icon">
+        <img id="moonIcon" src="assets/moon.svg" alt="Dark" width="20" height="20" />
+        <img id="sunIcon" src="assets/sun.svg" alt="Light" width="20" height="20" style="display:none" />
+      </button>
+    </div>
+  </nav>
+
+  <div class="detail-container">
+    <div id="loadingMsg" class="loading-msg">Memuat data...</div>
+
+    <div id="detailCard" class="detail-card" style="display:none">
+      <h2 id="detailNama" class="detail-nama"></h2>
+      <table class="detail-table">
+        <tr><td>ID Produk</td><td id="detailId"></td></tr>
+        <tr><td>Kategori</td><td id="detailKategori"></td></tr>
+        <tr><td>Harga</td><td id="detailHarga"></td></tr>
+        <tr><td>Stok</td><td id="detailStok"></td></tr>
+      </table>
+      <a href="dashboard.html" class="btn-back-bottom">&larr; Kembali ke Daftar</a>
+    </div>
+
+    <div id="errorMsg" class="error-card" style="display:none">
+      <p>Gagal memuat data produk.</p>
+      <a href="dashboard.html" class="btn-back-bottom">&larr; Kembali ke Daftar</a>
+    </div>
+  </div>
+
+  <script src="js/darkMode.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+</html>

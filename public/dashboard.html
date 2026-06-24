@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Elektronik - Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css" />
+  <link rel="icon" type="image/svg" href="assets/favicon.svg" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="/dashboard.html" class="logo"><span>Daftar</span> Produk</a>
+    </div>
+    <div class="nav-right">
+      <span id="userDisplay" class="user-name"></span>
+      <span id="authBtns">
+        <a href="login.html" class="btn-auth">Login</a>
+        <a href="register.html" class="btn-auth btn-outline">Register</a>
+      </span>
+      <button id="logoutBtn" class="btn-auth btn-outline" style="display:none">Logout</button>
+      <button id="darkModeBtn" class="btn-icon">
+        <img id="moonIcon" src="assets/moon.svg" alt="Dark" width="20" height="20" />
+        <img id="sunIcon" src="assets/sun.svg" alt="Light" width="20" height="20" style="display:none" />
+      </button>
+    </div>
+  </nav>
+
+  <header>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Cari produk..." />
+    </div>
+  </header>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nama Produk</th>
+          <th>Kategori</th>
+          <th>Harga</th>
+          <th>Stok</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="produk"></tbody>
+    </table>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="js/darkMode.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
